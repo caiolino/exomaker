@@ -1,0 +1,12 @@
+.titulo{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.buscar{
+    height: 50px;
+}
+.borda{
+    height: 50px;
+}

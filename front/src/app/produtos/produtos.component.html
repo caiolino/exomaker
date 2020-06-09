@@ -1,1 +1,20 @@
-<p>produtos works!</p>
+<h1 class="container titulo">Produtos</h1>
+<hr>
+<div class="container d-flex">
+    <input type="text" name="nome" id="nome" class="form-control mb-3 borda" placeholder="buscar por nome"
+        [(ngModel)]="nome_produto">
+    <button class="btn btn-success ml-3 buscar" (click)=findNome()>buscar</button>
+</div>
+
+<div class="container d-flex flex-wrap mt-5">
+    <div class="card mb-5 mr-4 m-3" style="width: 20rem;" *ngFor="let produto of listaProdutos">
+        <div class="card-body">
+            <img class="card-img-top" src="{{produto.imagem}}" alt="Imagem do produto">
+            <hr>
+            <h5 class="card-title">nome: {{produto.nomeProduto}}</h5>
+            <p class="card-text">Codigo: {{produto.id}}</p>
+            <p class="card-text">peço: R{{produto.preco}}</p>
+            <p class="card-text">descrição: R{{produto.descricao}}</p>
+        </div>
+    </div>
+</div>
