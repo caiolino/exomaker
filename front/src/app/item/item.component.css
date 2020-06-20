@@ -1,0 +1,74 @@
+.espaco{
+    margin-top: 160px;
+}
+.bg-produto{
+    background: #f6f5f4;
+    background: -moz-linear-gradient(-90deg, #353E80 0%, #353E80 50%, #697AFF 51%, #697AFF 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#353E80), color-stop(50%,#353E80), color-stop(51%,#697AFF), color-stop(100%,#697AFF));
+    background: -webkit-linear-gradient(-90deg, #353E80 0%,#353E80 50%,#697AFF 51%,#697AFF 100%);
+    background: -o-linear-gradient(-90deg, #353E80 0%,#353E80 50%,#697AFF 51%,#697AFF 100%);
+    background: -ms-linear-gradient(-90deg, #353E80 0%,#353E80 50%,#697AFF 51%,#697AFF 100%);
+    background: linear-gradient(180deg, #353E80 0%,#353E80 50%,#697AFF 51%,#697AFF 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#353E80', endColorstr='#697AFF',GradientType=1 );
+    margin-top: -15px;
+    height: 570px;
+    padding: 80px 0 0 0;
+    border-radius: 50px;
+    box-shadow: 2px 0px 15px 5px #0000004d;
+}
+hr{
+    border-top: 1px solid #697AFF;
+}
+.produto > img{
+    width: 800px;
+}
+.titulo{
+    text-align: center;
+    display: none;
+    color: #3E4896;
+}
+.nome-produto{
+    padding-left: 15px;
+    color: #3E4896
+}
+.product-form-price{
+    color: #3E4896;
+}
+.descricao{
+    padding: 0 15px;
+    text-align: justify;
+}
+.btn-sm{
+    width: 100%;
+    background-color: white;
+    color: #353E80;
+}
+.botao{
+    width: 100%;
+    background-image: linear-gradient(-90deg, #353e80, #697aff);
+    color: white;
+    text-transform: uppercase;
+    height: 50px;
+
+}
+.botao:hover{
+    background-image: none;
+    background-color: transparent;
+    border: 1px solid #353E80;
+    color: #353E80;
+}
+.borda:focus {
+    border: 2px solid #697AFF;
+    outline: 0;
+    box-shadow:none
+  }
+  .more{
+      color: #353E80;
+      text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 991px){
+      .espaco{
+          margin-top: 50px;
+      }
+  }

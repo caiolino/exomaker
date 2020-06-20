@@ -1,0 +1,118 @@
+h1,h2{
+    color:#353E80;
+}
+
+.titulo{
+    margin-top: 174px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagina{
+    margin-top: -100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+}
+
+
+.buscar{
+    border-color: transparent;
+    background: transparent linear-gradient(270deg, #353E80 0%, #697AFF 100%) 0% 0% no-repeat padding-box;
+    height: 50px;
+    width:150px;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+.buscar:hover{
+    background: white;
+    border: 1px solid #353E80;
+    color: #353E80;
+}
+.botao{
+    color: white;
+    border-color: transparent;
+    background: transparent linear-gradient(270deg, #353E80 0%, #697AFF 100%) 0% 0% no-repeat padding-box;
+    height: 50px;
+    width:100%;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+.botao-1{
+    color: white;
+    border-color: transparent;
+    background: transparent linear-gradient(270deg, #c21313 0%, #ff6969 100%) 0% 0% no-repeat padding-box;
+    height: 50px;
+    width:100%;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+.botao:hover{
+    background: white;
+    border: 1px solid #353E80;
+    color: #353E80;
+}
+.botao-1:hover{
+    background: white;
+    border: 1px solid #ff6969;
+    color: #c21313;
+}
+.borda{
+    margin: 0 auto;
+    height: 50px;
+    max-width: 600px;
+    border-radius: 10px;
+}
+.borda:focus{
+    border: 2px solid #697AFF;
+    outline: 0;
+    box-shadow:none
+}
+.espaco{
+    margin-top: 180px;
+}
+
+.center{
+    justify-content: center;
+}
+.form-busca{
+    margin: 0px 10px 16px 60px;
+}
+.tamanho{
+    max-width: 1200px;
+}
+.box{
+    border : 1px solid rgba(53, 62, 128, 0.336);
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.075);
+    border-radius: 20px;
+}
+.cor-texto{
+    color: #353E80;
+}
+
+.cadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+
+@media screen and (max-width: 991px){
+.borda{
+    max-width: 100%;
+}
+.form-control{
+    margin: 0px 10px 16px 20px;
+}
+.espaco{
+    margin-top: 40px;
+}
+.produtos{
+    justify-content: center;
+    margin: 0 auto;
+}
+}

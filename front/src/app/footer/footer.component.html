@@ -5,15 +5,38 @@
             <ul>
                 <li><a routerLink="/faq">Perguntas frequentes</a></li>
                 <li><a routerLink="/politicas">Politica de Privacidade</a></li>
+                <li class="adm" *ngIf="adm"><a data-toggle="modal" data-target="#myModal">Administrar</a></li>
             </ul>
-          <div>
-            <a href="#" class="icoInstagram" title="Instagram">
-                <fa-icon [icon]="faInstagram" class="faInstagram fa-3x p-3"></fa-icon>
-            </a>
-            <a href="#" class="icoLinkedin" title="Linkedin">
-                <fa-icon [icon]="faLinkedin" class="faLinkedin fa-3x p-3"></fa-icon>
-            </a>
-          </div>
+            <div>
+                <a href="#" class="icoInstagram" title="Instagram">
+                    <fa-icon [icon]="faInstagram" class="faInstagram fa-3x p-3"></fa-icon>
+                </a>
+                <a href="#" class="icoLinkedin" title="Linkedin">
+                    <fa-icon [icon]="faLinkedin" class="faLinkedin fa-3x p-3"></fa-icon>
+                </a>
+            </div>
         </div>
     </div>
 </footer>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Controle</h3>
+            </div>
+            <div class="modal-body">
+                <button routerLink='/control-produtos' type="submit" class="btn btn-info p-3 m-1"> Produtos </button>
+                <button routerLink='/users' type="button" class="btn btn-warning p-3 m-1">Usuarios</button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-info button" data-dismiss="modal"
+                    data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+
+    </div>
+</div>

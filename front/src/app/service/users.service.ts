@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Users } from '../model/Users';
+import { HttpClient} from '@angular/common/http';
+import { Users} from '../model/Users';
 
 @Injectable({
   providedIn: 'root'
@@ -10,28 +10,30 @@ export class UsersService {
   constructor(private http: HttpClient) { }
 
   getAllUsers() {
-    return this.http.get('http://93.188.161.223:9000/user');
+    return this.http.get('http://localhost:8080/usuarios',{headers:{'authorization': localStorage.getItem('token')}});
   }
 
-  postUser(Users: Users){
-    return this.http.post('http://93.188.161.223:9000/user',Users)
+  postUser(Users: Users) {
+    return this.http.post('http://localhost:8080/usuarios/cadastrar', Users,{headers:{'authorization': localStorage.getItem('token')}})
   }
 
-  getByIdUser(id:number){
-    return this.http.get(`http://93.188.161.223:9000/user/${id}`)
+  getByIdUser(id: number) {
+    return this.http.get(`http://localhost:8080/usuarios/${id}`,{headers:{'authorization': localStorage.getItem('token')}})
 
   }
 
   putUser(Users: Users) {
-    return this.http.put('http://93.188.161.223:9000/user', Users);
-  }
-  
-  deleteUser(id:number){
-    return this.http.delete(`http://93.188.161.223:9000/user/${id}`)
+    return this.http.put('http://localhost:8080/usuarios', Users,{headers:{'authorization': localStorage.getItem('token')}});
   }
 
-  findBynome(nome: String){
-    return this.http.delete(`http://93.188.161.223:9000/user/${nome}`)
+  deleteUser(id: number) {
+    return this.http.delete(`http://localhost:8080/usuarios/${id}`,{headers:{'authorization': localStorage.getItem('token')}})
   }
+
+  findBynome(nome: String) {
+    return this.http.delete(`http://localhost:8080/usuarios/${nome}`,{headers:{'authorization': localStorage.getItem('token')}})
+  }
+
+  
 
 }

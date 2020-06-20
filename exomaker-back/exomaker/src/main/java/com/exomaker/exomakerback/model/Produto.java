@@ -25,18 +25,14 @@ public class Produto {
 	private String nomeProduto;
 	
 	@NotNull
-	@Size(min=10, max=1000)
+	@Size(min=5, max=1000)
 	private String descricaoCompleta;
-	
-	@NotNull
-	@Size(min=10, max=500)
-	private String descricaoCurta;
 
 	@NotNull
 	private double preco;
 
 	@NotNull
-	@Size(min=10, max=500)
+	@Size(min=10, max=5000)
 	private String imagem;
 	
 	@Size(min=2, max=100)
@@ -67,14 +63,7 @@ public class Produto {
 	public void setDescricaoCompleta(String descricaoCompleta) {
 		this.descricaoCompleta = descricaoCompleta;
 	}
-
-	public String getDescricaoCurta() {
-		return descricaoCurta;
-	}
-
-	public void setDescricaoCurta(String descricaoCurta) {
-		this.descricaoCurta = descricaoCurta;
-	}
+	
 
 	public double getPreco() {
 		return preco;

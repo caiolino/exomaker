@@ -19,60 +19,48 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long user_id;
 	
-	@Column(length = 100)
+	@Column(unique = true, length = 100)
 	@Size(min = 2, max = 100)
 	@NotNull
 	private String usuario;
 	
-	@Column(length = 100)
-	@Size(min = 3, max = 100)
-	@NotNull
-	private String email;
-	
-	@Column(length = 100)
 	@Size(min = 6, max = 100)
 	@NotNull
 	private String senha;
 	
-	@Column(length = 100)
 	@Size(min = 2, max = 100)
 	@NotNull
 	private String nome;
 	
+	@Size(min = 6, max = 100)
 	@NotNull
-	@Column(length = 100)
-	@Size(min = 1 , max = 100)
-	private int cpf;
-	
+	@Email
+	private String email;
+
+	@Column(length = 11)
 	@NotNull
-	@Column(length = 100)
-	@Size(min = 1 , max = 100)
-	private int telefone;
+	private long cpf;
 	
 	@Column(length = 100)
+	@NotNull
+	private long telefone;
+	
+	@Size(min = 2, max = 100)
+	@NotNull
+	private String cep;
+	
 	@Size(min = 2, max = 100)
 	@NotNull
 	private String rua;
 	
+	@Column(length = 10000)
 	@NotNull
-	@Column(length = 1000000)
-	@Size(min = 1 , max = 1000000)
-	private int numero;
+	private long numero;
 	
-	@Column(length = 100)
 	@Size(min = 2, max = 100)
 	@NotNull
 	private String complemento;
 	
-	@NotNull
-	@Column(length = 100)
-	@Size(min = 1 , max = 100)
-	private int cep;
-	
-
-	public long getUser_id() {
-		return user_id;
-	}
 
 	public void setUser_id(long user_id) {
 		this.user_id = user_id;
@@ -84,14 +72,6 @@ public class Usuario {
 
 	public void setUsuario(String usuario) {
 		this.usuario = usuario;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
 	}
 
 	public String getSenha() {
@@ -110,19 +90,27 @@ public class Usuario {
 		this.nome = nome;
 	}
 
-	public int getCpf() {
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public long getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(int cpf) {
+	public void setCpf(long cpf) {
 		this.cpf = cpf;
 	}
 
-	public int getTelefone() {
+	public long getTelefone() {
 		return telefone;
 	}
 
-	public void setTelefone(int telefone) {
+	public void setTelefone(long telefone) {
 		this.telefone = telefone;
 	}
 
@@ -134,6 +122,18 @@ public class Usuario {
 		this.rua = rua;
 	}
 
+	public long getNumero() {
+		return numero;
+	}
+
+	public void setNumero(long numero) {
+		this.numero = numero;
+	}
+
+	public long getUser_id() {
+		return user_id;
+	}
+
 	public String getComplemento() {
 		return complemento;
 	}
@@ -142,14 +142,12 @@ public class Usuario {
 		this.complemento = complemento;
 	}
 
-	public int getCep() {
+	public String getCep() {
 		return cep;
 	}
 
-	public void setCep(int cep) {
+	public void setCep(String cep) {
 		this.cep = cep;
-	}	
-	
-	
+	}
 	
 }

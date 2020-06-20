@@ -21,6 +21,9 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { ItemComponent } from './item/item.component'
 import { LoginService } from './service/login.service';
+import { ControlProdutosComponent } from './control-produtos/control-produtos.component';
+import { EditProdutoComponent } from './edit-produto/edit-produto.component';
+import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { LoginService } from './service/login.service';
     LoginComponent,
     EditUserComponent,
     DeleteUserComponent,
-    ItemComponent
+    ItemComponent,
+    ControlProdutosComponent,
+    EditProdutoComponent,
+    DeleteProdutoComponent
   ],
   imports: [
     BrowserModule,

@@ -14,9 +14,16 @@ export class FooterComponent implements OnInit {
   faFacebook = faFacebook;
   faLinkedin = faLinkedin;
 
+  adm:boolean = false
+
   constructor() { }
 
   ngOnInit(): void {
+    if (localStorage.getItem('logado') == "true") {
+      this.adm = true
+    }else{
+      this.adm = false
+    }
   }
 
 }

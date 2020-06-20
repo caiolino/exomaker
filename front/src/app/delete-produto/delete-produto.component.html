@@ -1,20 +1,26 @@
 <div class="bg-color espaco"></div>
 <div class="container">
     <div class="cont box">
-        <h3 class="d-flex justify-content-center mt-3">Tem Certeza que deseja deletar o usuário?</h3>
+        <h3 class="d-flex justify-content-center mt-3">Tem Certeza que deseja deletar o produto?</h3>
 
         <hr class="mb-4">
-
+        <div class="form-grup d-flex justify-content-center">
+            <p><img src="{{produtos.imagem}}" alt="Foto de {{produtos.nomeProduto}}" class="imagem"></p>
+        </div>
         <div class="form-grup">
-            <p>Usuário: {{user.usuario}}</p>
+            <p>Produto: {{produtos.nomeProduto}}</p>
         </div>
-
-        <div>
-            <p>Nome: {{user.nome}}</p>
+        <div class="form-grup">
+            <p>ID: {{produtos.id}}</p>
         </div>
-
-        <div>
-            <p>Email: {{user.email}}</p>
+        <div class="form-grup">
+            <p>Preço: {{produtos.preco}}</p>
+        </div>
+        <div class="form-grup">
+            <p>Produto: {{produtos.nomeProduto}}</p>
+        </div>
+        <div class="form-grup">
+            <p>Descrição: {{produtos.descricaoCompleta}}</p>
         </div>
 
         <div class="d-flex justify-content-end mt-3 mb-3 flex">
@@ -32,11 +38,11 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title">Usuário deletado com sucesso!</h3>
+                    <h3 class="modal-title">Produto deletado com sucesso!</h3>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-info button" data-dismiss="modal"
-                        routerLink='/users'>Voltar</button>
+                        routerLink='/control-produtos'>Voltar</button>
                 </div>
             </div>
 

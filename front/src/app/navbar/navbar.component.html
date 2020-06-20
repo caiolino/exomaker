@@ -29,14 +29,25 @@
             <hr class="nav-separacao">
 
         </ul>
-        <div class="cont-icons">
-            <a href=""><img src="./assets/carrinho.svg" alt="icone carrinho" class="icon-navbar"><span
-                    class="texto-carrinho">Carrinho</span></a>
-            <a routerLink="/login" class="align-mobile"><img src="./assets/user.svg" alt="icone usuário"
-                    class="icon-navbar">Entre
-                ou
-                Cadastre-se</a>
+
+        <div class="log" *ngIf="logado">
+            <div class="cont-icons">
+                <!--   <a href=""><img src="./assets/carrinho.svg" alt="icone carrinho" class="icon-navbar"><span
+                           class="texto-carrinho">Carrinho</span></a>-->
+                <a routerLink="/users" class="align-mobile"><img src="./assets/user.svg" alt="icone usuário"
+                        class="icon-navbar">{{nome}}</a>
+                        <button (click)="logout()">Sair</button>
+            </div>
         </div>
+        <div class="deslogado" *ngIf="deslogado">
+            <div class="cont-icons">
+                <!--   <a href=""><img src="./assets/carrinho.svg" alt="icone carrinho" class="icon-navbar"><span
+                           class="texto-carrinho">Carrinho</span></a>-->
+                <a routerLink="/login" class="align-mobile"><img src="./assets/user.svg" alt="icone usuário"
+                        class="icon-navbar">Entre ou Cadastre-se</a>
+            </div>
+        </div>
+
     </div>
     <!-- </div> -->
 </nav>

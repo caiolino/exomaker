@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +9,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  logado: boolean = true
+  deslogado: boolean = true
+  nome: string = localStorage.getItem('nome')
+
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
+    if (localStorage.getItem('logado') == "true") {
+      this.logado = true
+      this.deslogado = false
+      this.nome = localStorage.getItem('nome')
+    } else {
+      this.logado = false
+      this.deslogado = true
+    }
+
   }
+
+  logout() {
+    localStorage.setItem("token", "");
+    localStorage.setItem("usuario", "")
+    localStorage.setItem("logado", "false")    
+    this.router.navigate(['/home']);
+    this.logado = false
+    this.deslogado = true
+    location.assign('/home')
+  }
+
+
 
 }

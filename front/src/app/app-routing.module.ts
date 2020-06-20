@@ -13,6 +13,9 @@ import { LoginComponent } from './login/login.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { ItemComponent } from './item/item.component';
+import { ControlProdutosComponent } from './control-produtos/control-produtos.component';
+import { EditProdutoComponent } from './edit-produto/edit-produto.component';
+import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
 
 
 
@@ -30,7 +33,10 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'edit-user/:id', component: EditUserComponent },
   { path: 'delete-user/:id', component: DeleteUserComponent },
-  { path: 'item/:id', component: ItemComponent }
+  { path: 'item/:id', component: ItemComponent },
+  { path: 'control-produtos', component: ControlProdutosComponent },
+  { path: 'edit-produto/:id', component:EditProdutoComponent},
+  { path: 'delete-produto/:id', component:DeleteProdutoComponent}
 
 ];
 

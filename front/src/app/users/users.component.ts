@@ -26,11 +26,9 @@ export class UsersComponent implements OnInit {
     })
   }
 
-  findNome(){
-    this.usersService.findBynome(this.nome).subscribe((resp:Users[])=>{
+  findNome() {
+    this.usersService.findBynome(this.nome).subscribe((resp: Users[]) => {
       this.listaUsers = resp
     })
   }
-
-
 }

@@ -1,0 +1,55 @@
+<div class="container titulo">
+    <h1>Controle de Produtos</h1>
+</div>
+<hr>
+<div class="pagina">
+    <div class="cadastro">
+        <h2>Cadastrar de Produtos</h2>
+        <div class="group-form">
+            <div class="form-grup m-3">
+                <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite aqui o nome"
+                    [(ngModel)]="produtos.nomeProduto">
+            </div>
+            <div class="form-grup m-3">
+                <input type="text" name="imagenm" id="imagenm" class="form-control"
+                    placeholder="Digite aqui a url da imagem" [(ngModel)]="produtos.imagem">
+            </div>
+            <div class="form-grup m-3">
+                <input type="text" name="preco" id="preco" class="form-control" placeholder="Digite aqui o preço"
+                    [(ngModel)]="produtos.preco">
+            </div>
+            <div class="form-grup m-3">
+                <input type="text" name="cdPreco" id="cdPreco" class="form-control"
+                    placeholder="Digite aqui o código do produto" [(ngModel)]="produtos.cdPreco">
+            </div>
+            <div class="form-group">
+                <textarea name="" id="" cols="30" rows="10" class="m-3" placeholder="Digite aqui a descricao do produto"
+                    [(ngModel)]="produtos.descricaoCompleta"></textarea>
+            </div>
+            <button type="submit" class="btn btn-info m-3" (click)="cadastrar()">Cadastrar</button>
+        </div>
+    </div>
+
+    <div>
+        <div class="container center d-flex espaco">
+            <input type="text" name="nome" id="nome" class="form-busca form-control mb-3 borda"
+                placeholder="Procurar produto" [(ngModel)]="nome_produto">
+            <button class="btn btn-success ml-3 buscar" (click)=findNome()>buscar</button>
+        </div>
+
+        <div class="container d-flex flex-wrap mt-5 produtos justify-content-center">
+            <div class="card mb-5 m-3 box" style="width: 14rem;" *ngFor="let produto of listaProdutos">
+                <div class="card-body">
+                    <img class="card-img-top" style="height: 180px" src="{{produto.imagem}}" alt="Imagem do produto">
+                    <hr>
+                    <h4 class="card-title text-center cor-texto">{{produto.nomeProduto}}</h4>
+                    <h4 class="card-title text-center cor-texto">ID:{{produto.id}}</h4>
+                    <h5 class="card-text text-center cor-texto">R${{produto.preco}}</h5>
+                    <span class="card-text text-center">{{produto.descricao}}</span>
+                    <button class="btn botao" [routerLink]="['/edit-produto',produto.id]">Editar</button>
+                    <button class="btn botao-1" [routerLink]="['/delete-produto',produto.id]">Deletar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

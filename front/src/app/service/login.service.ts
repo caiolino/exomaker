@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
-import { Users } from '../model/Users';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Users, UsersLogin } from '../model/Users';
 
 
 @Injectable({
@@ -8,10 +8,13 @@ import { Users } from '../model/Users';
 })
 export class LoginService {
 
-  constructor(private http:HttpClient) { }
+  usuario: String
+  senha: String
 
-  putUser(Users: Users) {
-    return this.http.put('http://93.188.161.223:9000/cadastrar', Users);
+  constructor(private http: HttpClient) { }
+
+  login(user: UsersLogin) {
+    return this.http.post('http://localhost:8080/usuarios/logar', user)
   }
 
 }

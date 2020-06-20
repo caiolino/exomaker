@@ -1,0 +1,45 @@
+<div class="bg-color espaco"></div>
+<div class="container">
+    <div class="cont box">
+        <h2 class="d-flex justify-content-center mt-3">Editar Produto</h2>
+        <hr class="mb-4">
+        <h4 class="text-center">Dados Produto</h4>
+        <div class="d-flex justify-content-center">
+            <img src="{{produtos.imagem}}" alt="foto de {{produtos.nomeProduto}}" class="imagem">
+        </div>
+        <div class="form-grup m-3">
+            <p>Nome do Produto:</p>
+            <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite aqui o nome"
+                [(ngModel)]="produtos.nomeProduto">
+        </div>
+        <div class="form-grup m-3">
+            <p>Url da imagem:</p>
+            <input type="text" name="imagenm" id="imagenm" class="form-control"
+                placeholder="Digite aqui a url da imagem" [(ngModel)]="produtos.imagem">
+        </div>
+        <div class="form-grup m-3">
+            <p>Preco:</p>
+            <input type="text" name="preco" id="preco" class="form-control" placeholder="Digite aqui o preço"
+                [(ngModel)]="produtos.preco">
+        </div>
+        <div class="form-grup m-3">
+            Codigo de preço
+            <input type="text" name="cdPreco" id="cdPreco" class="form-control"
+                placeholder="Digite aqui o código do produto" [(ngModel)]="produtos.cdPreco">
+        </div>
+        <div class="form-group m-3">
+            <p>Descrição</p>
+            <textarea name="" id="" cols="42" rows="10" placeholder="Digite aqui a descricao do produto"
+                [(ngModel)]="produtos.descricaoCompleta"></textarea>
+
+
+
+            <div class="d-flex justify-content-end mt-3 mb-3 flex">
+                <button type="button" class="btn btn-outline-info button" (click)="salvar()">Editar</button>
+                <button type="button" routerLink='/control-produtos'
+                    class="btn btn-outline-info cancel">Cancelar</button>
+            </div>
+        </div>
+
+
+    </div>
