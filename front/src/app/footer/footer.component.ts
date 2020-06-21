@@ -19,11 +19,10 @@ export class FooterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    if (localStorage.getItem('logado') == "true") {
+    if (localStorage.getItem('logado') == "true" && localStorage.getItem('admin')=='true') {
       this.adm = true
     }else{
       this.adm = false
     }
   }
-
 }

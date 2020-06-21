@@ -7,6 +7,22 @@ nav a {
     color:#353f80;
     font-weight: bold;
 }
+
+.sair{
+    border-radius: 10px;
+    padding: 5px;
+    border: 2px solid #353f80 ;
+    background-color: #ffffff;
+    font-weight: bold;
+    color: gray;
+    margin-left: 10px;
+}
+
+.sair:hover{
+    color: #ffffff;
+    background-color: #353f80;
+}
+
 .cont-icons{
     margin-right: 60px;
 }

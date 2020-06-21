@@ -18,5 +18,6 @@ export class UsersLogin {
     public nome: string;
     public senha: string;
     public token: string;
+    public admin: boolean;
 }
 

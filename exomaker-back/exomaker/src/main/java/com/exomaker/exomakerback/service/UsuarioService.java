@@ -19,6 +19,7 @@ public class UsuarioService {
 	private UsuarioRepository repository;
 	
 	public Usuario CadastrarUsuario(Usuario usuario) {
+		
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		
 		String senhaEncoder = encoder.encode(usuario.getSenha());
@@ -40,6 +41,7 @@ public class UsuarioService {
 				
 				user.get().setToken(authHeader);
 				user.get().setNome(usuario.get().getNome());
+				user.get().setAdmin(usuario.get().isAdmin());
 				
 				return user;
 				

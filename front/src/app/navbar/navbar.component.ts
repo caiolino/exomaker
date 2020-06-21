@@ -11,7 +11,7 @@ export class NavbarComponent implements OnInit {
 
   logado: boolean = true
   deslogado: boolean = true
-  nome: string = localStorage.getItem('nome')
+  nome: string;
 
   constructor(private route: ActivatedRoute, private router: Router) { }
 
@@ -19,7 +19,7 @@ export class NavbarComponent implements OnInit {
     if (localStorage.getItem('logado') == "true") {
       this.logado = true
       this.deslogado = false
-      this.nome = localStorage.getItem('nome')
+      this.nome = localStorage.getItem('usuario')
     } else {
       this.logado = false
       this.deslogado = true

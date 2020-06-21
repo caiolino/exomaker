@@ -11,7 +11,6 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @EnableWebSecurity
 public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -35,6 +34,14 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests()
 		.antMatchers(HttpMethod.GET, "/produtos").permitAll()
 		.antMatchers(HttpMethod.GET, "/produtos/**").permitAll()
+		.antMatchers(HttpMethod.POST, "/produtos/cadastrar").hasRole("ADMIN")
+		.antMatchers(HttpMethod.PUT, "/produtos").hasRole("ADMIN")
+		.antMatchers(HttpMethod.DELETE, "/produtos/*").hasRole("ADMIN")
+		.antMatchers(HttpMethod.GET, "/usuarios").hasRole("ADMIN")
+		.antMatchers(HttpMethod.GET, "/usuario/**").hasRole("ADMIN")
+		.antMatchers(HttpMethod.POST, "/usuarios/cadastrar").hasRole("ADMIN")
+		.antMatchers(HttpMethod.PUT, "/usuarios").hasRole("ADMIN")
+		.antMatchers(HttpMethod.DELETE, "/usuarios/*").hasRole("ADMIN")
 		.antMatchers("/usuarios/logar").permitAll()
 		.antMatchers("/usuarios/cadastrar").permitAll()
 		.anyRequest().authenticated()

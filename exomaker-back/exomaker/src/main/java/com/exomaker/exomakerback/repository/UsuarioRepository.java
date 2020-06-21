@@ -10,7 +10,7 @@ import com.exomaker.exomakerback.model.Usuario;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
-	public Optional<Usuario> findAllByUsuario (String titulo);
+	public Optional<Usuario> findAllByUsuario (String usuario);
 	
 	
 
