@@ -5,7 +5,7 @@ export class Users {
     public senha: string;
     public nome: string;
     public email: string;
-    public cpf: number;
+    public cpf: string;
     public telefone: number;
     public cep: string;
     public rua: string;

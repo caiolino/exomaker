@@ -5,10 +5,13 @@
 
         <hr class="mb-4">
         <h4 class="text-center">Dados Pessoais</h4>
-      
+
         <div class="form-grup">
             <input type="text" name="usuario" id="usuario" class="form-control mb-3 borda" placeholder="Usuario"
                 [(ngModel)]="user.usuario">
+        </div>
+        <div class="alert alert-danger" *ngIf="validUser" role="alert">
+            Nome usuario invalido!
         </div>
         <div class="form-grup">
             <input type="text" name="nome" id="nome" class="form-control mb-3 borda" placeholder="Nome completo"
@@ -25,12 +28,17 @@
             <input type="text" name="cpf" id="nome" class="form-control mb-3 borda" placeholder="CPF"
                 [(ngModel)]="user.cpf">
         </div>
+        <div class="alert alert-danger" *ngIf="validCpf" role="alert">
+            cpf invalido!
+        </div>
         <div class="form-grup">
             <span>Ex: João@gmail.com</span>
             <input type="email" name="email" id="email" class="form-control mb-3 borda" placeholder="Email"
                 [(ngModel)]=user.email>
         </div>
-
+        <div class="alert alert-danger" *ngIf="validEmail" role="alert">
+            e-mail invalido!
+        </div>
         <div class="form-grup">
             <span>Minimo 6 caractéres</span>
             <input type="password" name="senha" id="senha" class="form-control mb-3 borda" placeholder="Senha"
@@ -40,6 +48,12 @@
         <div class="form-grup">
             <input type="password" name="senha" id="senha" class="form-control mb-3 borda" placeholder="Confirmar Senha"
                 [(ngModel)]="confirm.senha">
+        </div>
+        <div class="alert alert-danger" *ngIf="alerta" role="alert">
+            As senhas não correspondem!
+        </div>
+        <div class="alert alert-danger" *ngIf="senhaMin" role="alert">
+            A senha deve ter no minimo 6 caractéres!
         </div>
         <h4 class="text-center">Endereço</h4>
         <div class="form-grup">
@@ -59,9 +73,6 @@
             <span>Não Necessário</span>
             <input type="text" name="complemento" id="complemento" class="form-control mb-3 borda"
                 placeholder="Complemento" [(ngModel)]="user.complemento">
-        </div>
-        <div class="alert alert-danger" *ngIf="alerta" role="alert">
-            As senhas não correspondem!
         </div>
 
         <div class="d-flex justify-content-end mt-3 mb-3 flex">

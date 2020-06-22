@@ -14,7 +14,7 @@ export class UsersService {
   }
 
   postUser(Users: Users) {
-    return this.http.post('http://localhost:8080/usuarios/cadastrar', Users,{headers:{'authorization': localStorage.getItem('token')}})
+    return this.http.post('http://localhost:8080/usuarios/cadastrar',Users)
   }
 
   getByIdUser(id: number) {

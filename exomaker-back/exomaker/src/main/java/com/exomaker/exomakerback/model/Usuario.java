@@ -44,7 +44,7 @@ public class Usuario {
 
 	@Column(length = 11)
 	@NotNull
-	private long cpf;
+	private String cpf;
 	
 	@Column(length = 100)
 	@NotNull
@@ -63,7 +63,6 @@ public class Usuario {
 	private long numero;
 	
 	@Size(min = 2, max = 100)
-	@NotNull
 	private String complemento;
 	
     @Column(columnDefinition = "boolean default false")
@@ -115,11 +114,11 @@ public class Usuario {
 		this.email = email;
 	}
 
-	public long getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(long cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 
