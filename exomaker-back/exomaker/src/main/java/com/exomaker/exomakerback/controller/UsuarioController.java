@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.exomaker.exomakerback.model.UserLogin;
+import com.exomaker.exomakerback.dto.UserLogin;
 import com.exomaker.exomakerback.model.Usuario;
 import com.exomaker.exomakerback.repository.UsuarioRepository;
 import com.exomaker.exomakerback.service.UsuarioService;

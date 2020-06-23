@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.exomaker.exomakerback.model.UserLogin;
+import com.exomaker.exomakerback.dto.UserLogin;
 import com.exomaker.exomakerback.model.Usuario;
 import com.exomaker.exomakerback.repository.UsuarioRepository;
 

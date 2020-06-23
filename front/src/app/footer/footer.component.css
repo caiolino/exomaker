@@ -46,6 +46,18 @@ ul{
     height: auto;
 } 
 
+.footer .footer-boottom{
+    background-color: #363b96 ;
+    color: #ffffff;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 20px;
+    
+}
+
 @media screen and (max-width: 922px) {
     footer > div{
         width: 100%;

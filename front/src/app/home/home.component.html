@@ -24,74 +24,61 @@
 </div>
 <!--Fim do Carousel-->
 
-<!-- <div class="cs-shape cs-shape-bottom cs-shape-curve bg-body">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4">
-        <path fill="currentColor" d="M3000,0v185.4H0V0c496.4,115.6,996.4,173.4,1500,173.4S2503.6,115.6,3000,0z">
-        </path>
-    </svg>
-</div> -->
-
 <!--Cards sobre carousel-->
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-4" *ngFor="let produto of listaProdutosPrincipal">
-            <div class="card fundo-card1" style="width: 18rem; margin-top: -200px">
-                <img src="{{produto.imagem}}" class="card-img-top" alt="Imagem {{produto.nomeProduto}}">
-                <div class="card-body">
-                    <p class="card-text text-white">{{produto.nomeProduto}}</p>
-                    <p class="card-text text-white">R$ {{produto.preco}}</p>
-                    <a [routerLink]="['/item',produto.id]" class="btn btn-outline-light w-100" style="border-radius: 10px;">Saiba
-                        mais</a>
-                </div>
+<div class="mt-5 d-flex justify-content-center flex-wrap">
+    <div class="" *ngFor="let produto of listaProdutosPrincipal">
+        <div class="card fundo-card1">
+            <img src="{{produto.imagem}}" class="card-img-top" alt="Imagem {{produto.nomeProduto}}">
+            <div class="card-body">
+                <p class="card-text text-white">{{produto.nomeProduto}}</p>
+                <p class="card-text text-white">R$ {{produto.preco}}</p>
+                <a [routerLink]="['/item',produto.id]" class="btn btn-outline-light w-100"
+                    style="border-radius: 10px;">Saiba
+                    mais</a>
             </div>
         </div>
     </div>
 </div>
+
+<h2 class="letra-produto text-center w-100 mt-5">PRODUTOS EM DESTAQUE</h2>
 
 <!--Cards produtos em destaque-->
-<div class="container mt-5 mb-5">
-    <div class="row">
-        <h2 class="letra-produto text-center w-100 mb-5">PRODUTOS EM DESTAQUE</h2>
-        <div class="col-md-3" *ngFor="let produto of listaProdutos">
-            <div class="card card-produto" style="width: 15rem;">
-                <img src="{{produto.imagem}}" class="card-img-top" alt="{{produto.nomeProduto}}">
-                <div class="card-body">
-                    <p class="card-text text-center letra-produto">{{produto.nomeProduto}}</p>
-                    <p class="card-text text-center letra-produto">R${{produto.preco}}</p>
-                    <a routerLink="/loja" class="btn btn-cor w-100 text-white" [routerLink]="['/item',produto.id]">Comprar</a>
-                </div>
+<div class="mt-5 mb-5 d-flex justify-content-center flex-wrap">
+    <div class="" *ngFor="let produto of listaProdutos">
+        <div class="card card-produto">
+            <img src="{{produto.imagem}}" class="card-img-top" alt="{{produto.nomeProduto}}">
+            <div class="card-body">
+                <p class="card-text text-center letra-produto">{{produto.nomeProduto}}</p>
+                <p class="card-text text-center letra-produto">R${{produto.preco}}</p>
+                <a routerLink="/loja" class="btn btn-cor w-100 text-white"
+                    [routerLink]="['/item',produto.id]">Comprar</a>
             </div>
         </div>
-        
     </div>
 </div>
-<!--Fim produtos em destaque-->
 
 <!--Banner suporte-->
-<div class="fundo-suporte mb-5 pt-3" style="margin-top: 11%;">
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-3">
-            <h4 class="text-white mt-4">SUPORTE PARA CACHORRO</h4>
-            <p class="text-white mt-3">simply dummy text of the printing and typesetting industry been the industry's
-                standard
-                dummy text ever since the 1500s, when an unknown printer took.</p>
-            <a routerLink="/produtos" class="btn btn-outline-light w-100 mt-2" style="border-radius: 10px;">Comprar</a>
-        </div>
-        <div class="col-md-3">
-            <img class="w-100" src="https://i.imgur.com/dT6h9RQ.png" alt="Imagem cachorro com suporte">
-        </div>
-        <div class="col-md-3"></div>
+<div class="fundo-suporte mb-5 d-flex justify-content-center flex-wrap">
+
+    <div class="card-suporte">
+        <h4 class="text-white mt-4">SUPORTE PARA CACHORRO</h4>
+        <p class="text-white mt-3">simply dummy text of the printing and typesetting industry been the industry's
+            standard
+            dummy text ever since the 1500s, when an unknown printer took.</p>
+        <a routerLink="/produtos" class="btn btn-outline-light w-100 mt-2" style="border-radius: 10px;">Comprar</a>
+    </div>
+    <div>
+        <img class="dog" src="https://i.imgur.com/dT6h9RQ.png" alt="Imagem cachorro com suporte">
     </div>
 </div>
 <!--Fim banner suporte-->
 
 <!--Cards icones-->
 
-<div class="container mb-5" style="margin-top: 11%;">
-    <div class="row">
+<div class="container mb-5 d-flex justify-content-center flex-wrap">
+    
         <div class="col-md-4">
-            <div class="card card-icone" style="width: 20rem;">
+            <div class="card card-icone">
                 <img src="../../assets/wheelchair.svg" class="card-img-top rounded mx-auto d-block mt-4"
                     style="width: 23%;" alt="Icone cadeira de rodas">
                 <div class="card-body">
@@ -102,7 +89,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card card-icone" style="width: 20rem;">
+            <div class="card card-icone">
                 <img src="../../assets/hello.svg" class="card-img-top rounded mx-auto d-block mt-4" style="width: 23%;"
                     alt="Icone cadeira de rodas">
                 <div class="card-body">
@@ -113,7 +100,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card card-icone" style="width: 20rem;">
+            <div class="card card-icone">
                 <img src="../../assets/wrench.svg" class="card-img-top rounded mx-auto d-block mt-4" style="width: 32%;"
                     alt="Icone cadeira de rodas">
                 <div class="card-body">
@@ -123,7 +110,5 @@
                 </div>
             </div>
         </div>
-    </div>
+   
 </div>
-
-<!--Fim cards icones-->

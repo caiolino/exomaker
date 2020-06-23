@@ -1,4 +1,4 @@
-package com.exomaker.exomakerback.model;
+package com.exomaker.exomakerback.dto;
 
 public class UserLogin {
 	

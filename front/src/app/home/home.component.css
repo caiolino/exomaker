@@ -10,13 +10,9 @@
     box-shadow: 0px 10px 10px #00000029;
     border-radius: 30px;
     opacity: 1;
-}
-
-.fundo-card2{
-    background: #697AFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 10px 10px #00000029;
-    border-radius: 30px;
-    opacity: 1;
+    width: 300px;
+    margin: 20px;
+    margin-top: -200px;
 }
 
 .letra-produto{
@@ -43,12 +39,22 @@
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     opacity: 1;
+    width: 15rem;
+    margin: 10px;
 }
 
 .fundo-suporte{
     background: transparent linear-gradient(270deg, #3E4896 0%, #697AFF 100%) 0% 0% no-repeat padding-box;
     width: 100%;
-    height: 280px;
+    padding: 10px;
+}
+
+.card-suporte{
+    width: 500px;
+}
+
+.dog{
+    max-width: 300px;
 }
 
 .card-icone{
@@ -59,6 +65,7 @@
     transition: all 0.3s;
     -webkit-transform: translateY(0);
     transform: translateY(0);
+    height: 350px;
 }
 
 .card-icone:hover{
@@ -66,3 +73,12 @@
     transform: translateY(-8px);
     box-shadow: 5px 10px 13px #04077357;
 }
+
+
+
+@media screen and (max-width: 1200px){
+    .fundo-card1{
+        margin-top: 0;
+    }
+
+  }
