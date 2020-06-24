@@ -42,7 +42,7 @@ export class CadastroComponent implements OnInit {
       this.senhaMin = true;
       this.valido = false;
     }
-    if (this.user.email.endsWith(".com") == false || this.user.email.includes("@") == false || this.user.email.endsWith(".com.br")) {
+    if (this.user.email.endsWith(".com") == false || this.user.email.includes("@") == false || this.user.email.endsWith(".com.br") == false) {
       this.validEmail = true;
       this.valido = false;
     }

@@ -82,3 +82,15 @@
     }
 
   }
+
+
+  @media screen and (max-width: 775px){
+    .card-icone{
+        margin-top: 5px;
+    }
+
+    .dog{
+        display: none;
+    }
+
+  }
