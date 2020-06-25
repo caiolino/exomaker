@@ -1,11 +1,11 @@
 <footer>
     <div>
-        <a href="#home"><img src="../../assets/exo-maker-reduzida_Prancheta 1.svg" alt="logo" id="logofoot"></a>
+        <a href="#home"><img src="../../assets/exo-maker-reduzida-branco_Prancheta 1.svg" alt="logo" id="logofoot"></a>
         <div>
             <ul>
-                <li><a routerLink="/faq">Perguntas frequentes</a></li>
-                <li><a routerLink="/politicas">Politica de Privacidade</a></li>
-                <li class="adm" *ngIf="adm"><a data-toggle="modal" data-target="#myModal">Administrar</a></li>
+                <li><a routerLink="/faq" class="faq text-white">Perguntas Frequentes</a></li>
+                <li><a routerLink="/politicas" class="privacidade text-white">Politica de Privacidade</a></li>
+                <li class="adm text-white" *ngIf="adm"><a data-toggle="modal" data-target="#myModal">Administrar</a></li>
             </ul>
             <div>
                 <a href="#" class="icoInstagram" title="Instagram">
@@ -13,6 +13,9 @@
                 </a>
                 <a href="#" class="icoLinkedin" title="Linkedin">
                     <fa-icon [icon]="faLinkedin" class="faLinkedin fa-3x p-3"></fa-icon>
+                </a>
+                <a href="#" class="icoFacebook" title="Facebook">
+                    <fa-icon [icon]="faFacebook" class="faFacebook fa-3x p-3"></fa-icon>
                 </a>
             </div>
         </div>
