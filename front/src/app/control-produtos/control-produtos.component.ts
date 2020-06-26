@@ -15,6 +15,7 @@ export class ControlProdutosComponent implements OnInit {
 
   produtos: Produto = new Produto;
 
+  p:number =1;
 
   constructor(private produtosService: ProdutosService) { }
 
@@ -37,6 +38,8 @@ export class ControlProdutosComponent implements OnInit {
     this.produtosService.postProduto(this.produtos).subscribe((resp: Produto) => {
       this.produtos = resp;
       location.assign('/control-produtos')
+    }, (erro) => {
+      alert("Algum dado invalido!")
     })
   }
 }

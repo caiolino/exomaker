@@ -20,6 +20,7 @@
     background: transparent linear-gradient(270deg, #353E80 0%, #697AFF 100%) 0% 0% no-repeat padding-box;
     color: #ffffff;
     box-shadow: 0 0 10px #00000069;
+    margin-top: 128px;
 }
 
 
@@ -36,4 +37,11 @@ p{
 }
 h5{
     font-weight: bold;
+}
+
+@media screen and (max-width: 992px){
+    .titulo{
+        margin-top: 0;
+    }
+
 }

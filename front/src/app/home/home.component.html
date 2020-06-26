@@ -1,82 +1,83 @@
-<!--Carousel-->
-<div class="carrossel w-100 mt-5">
-    <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="..." class="d-block w-100" alt="...">
+<div class="espaco">
+    <!--Carousel-->
+    <div class="carrossel w-100">
+        <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../../assets/banner-exomaker.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-</div>
-<!--Fim do Carousel-->
-
-<!--Cards sobre carousel-->
-<div class="mt-5 d-flex justify-content-center flex-wrap">
-    <div class="" *ngFor="let produto of listaProdutosPrincipal">
-        <div class="card fundo-card1">
-            <img src="{{produto.imagem}}" class="card-img-top" alt="Imagem {{produto.nomeProduto}}">
-            <div class="card-body">
-                <p class="card-text text-white">{{produto.nomeProduto}}</p>
-                <p class="card-text text-white">R$ {{produto.preco}}</p>
-                <a [routerLink]="['/item',produto.id]" class="btn btn-outline-light w-100"
-                    style="border-radius: 10px;">Saiba
-                    mais</a>
-            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </div>
-</div>
+    <!--Fim do Carousel-->
 
-<h2 class="letra-produto text-center w-100 mt-5">PRODUTOS EM DESTAQUE</h2>
-
-<!--Cards produtos em destaque-->
-<div class="mt-5 mb-5 d-flex justify-content-center flex-wrap">
-    <div class="" *ngFor="let produto of listaProdutos">
-        <div class="card card-produto">
-            <img src="{{produto.imagem}}" class="card-img-top" alt="{{produto.nomeProduto}}">
-            <div class="card-body">
-                <p class="card-text text-center letra-produto">{{produto.nomeProduto}}</p>
-                <p class="card-text text-center letra-produto">R${{produto.preco}}</p>
-                <a routerLink="/loja" class="btn btn-cor w-100 text-white"
-                    [routerLink]="['/item',produto.id]">Comprar</a>
+    <!--Cards sobre carousel-->
+    <div class="mt-5 d-flex justify-content-center flex-wrap">
+        <div class="" *ngFor="let produto of listaProdutosPrincipal">
+            <div class="card fundo-card1">
+                <img src="{{produto.imagem}}" class="card-img-top" alt="Imagem {{produto.nomeProduto}}">
+                <div class="card-body">
+                    <p class="card-text text-white">{{produto.nomeProduto}}</p>
+                    <p class="card-text text-white">R$ {{produto.preco}}</p>
+                    <a [routerLink]="['/item',produto.id]" class="btn btn-outline-light w-100"
+                        style="border-radius: 10px;">Saiba
+                        mais</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!--Banner suporte-->
-<div class="fundo-suporte mb-5 d-flex justify-content-center flex-wrap">
+    <h2 class="letra-produto text-center w-100 mt-5">PRODUTOS EM DESTAQUE</h2>
 
-    <div class="card-suporte">
-        <h4 class="text-white mt-4">SUPORTE PARA CACHORRO</h4>
-        <p class="text-white mt-3">simply dummy text of the printing and typesetting industry been the industry's
-            standard
-            dummy text ever since the 1500s, when an unknown printer took.</p>
-        <a routerLink="/produtos" class="btn btn-outline-light w-100 mt-2" style="border-radius: 10px;">Comprar</a>
+    <!--Cards produtos em destaque-->
+    <div class="mt-5 mb-5 d-flex justify-content-center flex-wrap">
+        <div class="" *ngFor="let produto of listaProdutos">
+            <div class="card card-produto">
+                <img src="{{produto.imagem}}" class="card-img-top" alt="{{produto.nomeProduto}}">
+                <div class="card-body">
+                    <p class="card-text text-center letra-produto">{{produto.nomeProduto}}</p>
+                    <p class="card-text text-center letra-produto">R${{produto.preco}}</p>
+                    <a routerLink="/loja" class="btn btn-cor w-100 text-white"
+                        [routerLink]="['/item',produto.id]">Comprar</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <img class="dog" src="https://i.imgur.com/dT6h9RQ.png" alt="Imagem cachorro com suporte">
+
+    <!--Banner suporte-->
+    <div class="fundo-suporte mb-5 d-flex justify-content-center flex-wrap">
+
+        <div class="card-suporte">
+            <h4 class="text-white mt-4">SUPORTE PARA CACHORRO</h4>
+            <p class="text-white mt-3">simply dummy text of the printing and typesetting industry been the industry's
+                standard
+                dummy text ever since the 1500s, when an unknown printer took.</p>
+            <a routerLink="/produtos" class="btn btn-outline-light w-100 mt-2" style="border-radius: 10px;">Comprar</a>
+        </div>
+        <div>
+            <img class="dog" src="https://i.imgur.com/dT6h9RQ.png" alt="Imagem cachorro com suporte">
+        </div>
     </div>
-</div>
-<!--Fim banner suporte-->
+    <!--Fim banner suporte-->
 
-<!--Cards icones-->
+    <!--Cards icones-->
 
-<div class="container mb-5 d-flex justify-content-center flex-wrap">
-    
+    <div class="container mb-5 d-flex justify-content-center flex-wrap">
+
         <div class="col-md-4">
             <div class="card card-icone">
                 <img src="../../assets/wheelchair.svg" class="card-img-top rounded mx-auto d-block mt-4"
@@ -110,5 +111,6 @@
                 </div>
             </div>
         </div>
-   
+
+    </div>
 </div>

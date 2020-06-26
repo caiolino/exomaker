@@ -33,6 +33,8 @@ export class DeleteUserComponent implements OnInit {
       this.delOk = true
       //   this.router.navigate(['/users'])
       // localStorage.setItem("delOK",this.delOk.toString())
+    }, (erro) => {
+      alert("Algum dado invalido!")
     })
 
   }

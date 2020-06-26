@@ -49,10 +49,20 @@ export class EditUserComponent implements OnInit {
       this.senhaMin = true;
       this.valido = false;
     }
-    if (this.user.email.endsWith(".com") == false || this.user.email.includes("@") == false || this.user.email.endsWith(".com.br")) {
+    //validacao do email
+    if (this.user.email.includes("@") == false) {
       this.validEmail = true;
       this.valido = false;
     }
+    if (this.user.email.endsWith(".com") == true || this.user.email.endsWith(".com.br") == true) {
+      this.validEmail = false;
+      this.valido = true;
+    } else {
+      this.validEmail = true;
+      this.valido = false;
+    }
+
+    //validcau usuario
     if (this.user.usuario.includes(" ") || this.user.usuario.length < 2) {
       this.validUser = true
       this.valido = false;
@@ -112,7 +122,9 @@ export class EditUserComponent implements OnInit {
         alert("Modificaçoes Salvas!")
         this.router.navigate(['/users'])
         location.assign('/users')
-      })
+      }), (erro) => {
+        alert("Algum dado invalido!")
+      }
     }
 
   }

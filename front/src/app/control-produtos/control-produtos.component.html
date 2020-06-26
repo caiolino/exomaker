@@ -38,7 +38,8 @@
         </div>
 
         <div class="container d-flex flex-wrap mt-5 produtos justify-content-center">
-            <div class="card mb-5 m-3 box" style="width: 14rem;" *ngFor="let produto of listaProdutos">
+            <div class="card mb-5 m-3 box" style="width: 14rem;"
+                *ngFor="let produto of listaProdutos | paginate: { itemsPerPage: 8, currentPage: p}">
                 <div class="card-body">
                     <img class="card-img-top" style="height: 180px" src="{{produto.imagem}}" alt="Imagem do produto">
                     <hr>
@@ -50,6 +51,10 @@
                     <button class="btn botao-1" [routerLink]="['/delete-produto',produto.id]">Deletar</button>
                 </div>
             </div>
+        </div>
+        <div class="d-flex justify-content-center mb-3">
+            <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Próxima">
+            </pagination-controls>
         </div>
     </div>
 </div>

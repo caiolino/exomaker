@@ -31,7 +31,7 @@ export class UsersService {
   }
 
   findBynome(nome: String) {
-    return this.http.delete(`http://localhost:8080/usuarios/${nome}`,{headers:{'authorization': localStorage.getItem('token')}})
+    return this.http.get(`http://localhost:8080/usuarios/nome/${nome}`,{headers:{'authorization': localStorage.getItem('token')}})
   }
 
   

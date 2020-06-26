@@ -24,6 +24,8 @@ import { LoginService } from './service/login.service';
 import { ControlProdutosComponent } from './control-produtos/control-produtos.component';
 import { EditProdutoComponent } from './edit-produto/edit-produto.component';
 import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { ContatoMensagemComponent } from './contato-mensagem/contato-mensagem.component'; // <-- import the module
 
 @NgModule({
   declarations: [
@@ -44,14 +46,16 @@ import { DeleteProdutoComponent } from './delete-produto/delete-produto.componen
     ItemComponent,
     ControlProdutosComponent,
     EditProdutoComponent,
-    DeleteProdutoComponent
+    DeleteProdutoComponent,
+    ContatoMensagemComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]

@@ -16,6 +16,7 @@ import { ItemComponent } from './item/item.component';
 import { ControlProdutosComponent } from './control-produtos/control-produtos.component';
 import { EditProdutoComponent } from './edit-produto/edit-produto.component';
 import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
+import { ContatoMensagemComponent } from './contato-mensagem/contato-mensagem.component';
 
 
 
@@ -36,7 +37,8 @@ const routes: Routes = [
   { path: 'item/:id', component: ItemComponent },
   { path: 'control-produtos', component: ControlProdutosComponent },
   { path: 'edit-produto/:id', component:EditProdutoComponent},
-  { path: 'delete-produto/:id', component:DeleteProdutoComponent}
+  { path: 'delete-produto/:id', component:DeleteProdutoComponent},
+  { path: 'contato-mensagem', component:ContatoMensagemComponent}
 
 ];
 

@@ -15,6 +15,10 @@ export class ProdutosComponent implements OnInit {
 
   cdpreco: string;
 
+  items = []
+
+  p: number = 1
+
   constructor(private produtosService: ProdutosService) { }
 
   ngOnInit(): void {
@@ -26,6 +30,14 @@ export class ProdutosComponent implements OnInit {
       this.listaProdutos = resp;
     })
   }
+
+  //paginacao
+  onChangePage(pageOfItems: Array<any>) {
+    // update current page of items
+    this.listaProdutos = pageOfItems;
+  }
+
+  //filtros
 
   findNome() {
     this.produtosService.findBynome(this.nome_produto).subscribe((resp: Produto[]) => {

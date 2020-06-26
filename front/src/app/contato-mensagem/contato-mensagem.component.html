@@ -1,0 +1,25 @@
+<div class="container">
+    <h1 class="text-center titulo">Mensagens</h1>
+    <hr class="mb-5">
+</div>
+<div class="container" *ngFor="let contato of listaContato | paginate: { itemsPerPage: 5, currentPage: p}">
+    <div class="card mb-3">
+        <div class="d-flex justify-content-between card-header">
+            <h4>Nome: {{contato.nome}}</h4>
+            <h4>Id: {{contato.contato_id}}</h4>
+        </div>
+        <div class="card-body">
+            <h6 class="card-title">email: {{contato.email}}</h6>
+            <h6 class="card-title">Telefone: {{contato.telefone}}</h6>
+            <hr>
+            <p class="card-text">{{contato.mensagem}}</p>
+            <div class="d-flex justify-content-end">
+                <button class="btn btn-danger" (click)="deletar(contato.contato_id)">Deletar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-flex justify-content-center mt-3 mb-3">
+    <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Próxima">
+    </pagination-controls>
+</div>

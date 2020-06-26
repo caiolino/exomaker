@@ -9,29 +9,28 @@
                 <h2 class="cor text-center">FALE CONOSCO</h2>
                 <h4 class="text-center mb-3">NOS MANDE UMA MENSAGEM.</h4>
                 <div class="form-group">
-
                     <label for="nome">Nome:</label>
-                    <input type="text" class="form-control color-input borda" id="nome" placeholder="Digite seu nome">
-                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                        else.</small> -->
+                    <input type="text" class="form-control color-input borda" id="nome" placeholder="Digite seu nome"
+                        [(ngModel)]="contato.nome">
                 </div>
                 <div class="form-group">
                     <label for="email">E-mail:</label>
                     <input type="email" class="form-control color-input borda" id="email"
-                        placeholder="Digite seu e-mail">
+                        placeholder="Digite seu e-mail" [(ngModel)]="contato.email">
                 </div>
                 <div class="form-group">
                     <label for="telefone">Telefone:</label>
                     <input type="text" class="form-control color-input borda" id="telefone"
-                        placeholder="Digite seu telefone">
+                        placeholder="Digite seu telefone" [(ngModel)]="contato.telefone">
                 </div>
                 <div class="form-group">
                     <label for="mensagem">Mensagem:</label>
                     <textarea class="form-control color-input borda" name="mensagem" id="mensagem"
-                        placeholder="Digite sua mensagem" cols="30" rows="5"></textarea>
+                        placeholder="Digite sua mensagem" cols="30" rows="5" [(ngModel)]="contato.mensagem"></textarea>
                 </div>
-                <button type="submit" class="btn button">Enviar</button>
+                <button type="submit" class="btn button" (click)="enviar()">Enviar</button>
             </div>
         </div>
+
     </div>
 </div>

@@ -1,5 +1,5 @@
 footer{
-    background-color: rgb(243, 243, 243);
+    background-color:#363b96;
     box-shadow: 0 0 10px #00000069;
     padding: 25px;
 }
@@ -21,7 +21,7 @@ footer > div >div{
 
 
 footer > div >div >ul >li > a:hover{
-background-color: #697AFF;
+background-color: #637bf0;
 color: #ffffff;
 padding: 10px;
 }
@@ -56,6 +56,21 @@ ul{
     left: 0px;
     padding-top: 20px;
     
+}
+.faInstagram{
+    color: #ffffff;
+}
+.faFacebook{
+    color: #ffffff;
+}
+.faLinkedin{
+    color: #ffffff;
+}
+
+.hover:hover{
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+    box-shadow: 5px 10px 13px #04077357;
 }
 
 @media screen and (max-width: 922px) {

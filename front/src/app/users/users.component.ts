@@ -14,6 +14,8 @@ export class UsersComponent implements OnInit {
 
   nome: String;
 
+  p: number = 1
+
   constructor(private usersService: UsersService) { }
 
   ngOnInit(): void {
@@ -31,4 +33,5 @@ export class UsersComponent implements OnInit {
       this.listaUsers = resp
     })
   }
+
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../service/users.service';
+import { LoginService } from '../service/login.service';
 import { Users } from '../model/Users';
+import { UsersLogin } from '../model/Users';
 import { ActivatedRoute, Router } from '@angular/router';
 
 
@@ -12,6 +14,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class CadastroComponent implements OnInit {
 
   user: Users = new Users
+
+  usuario: UsersLogin = new UsersLogin;
 
   confirm: Users = new Users
 
@@ -28,13 +32,14 @@ export class CadastroComponent implements OnInit {
   validCpf: boolean = false;
 
 
-  constructor(private usersService: UsersService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private usersService: UsersService, private route: ActivatedRoute, private router: Router, private loginService: LoginService) { }
 
   ngOnInit(): void {
   }
 
+
   cadastrar() {
-    if (this.user.senha != this.confirm.senha || this.user.senha.length < 6) {
+    if (this.user.senha != this.confirm.senha) {
       this.alerta = true;
       this.valido = false;
     }
@@ -42,17 +47,28 @@ export class CadastroComponent implements OnInit {
       this.senhaMin = true;
       this.valido = false;
     }
-    if (this.user.email.endsWith(".com") == false || this.user.email.includes("@") == false || this.user.email.endsWith(".com.br") == false) {
+
+    //validacao do email
+    if (this.user.email.includes("@") == false) {
       this.validEmail = true;
       this.valido = false;
     }
+
+    if(this.user.email.endsWith(".com")==true||this.user.email.endsWith(".com.br")==true){
+      this.validEmail = false;
+      this.valido = true;
+    }else{
+      this.validEmail = true;
+      this.valido = false;
+    }
+
     if (this.user.usuario.includes(" ") || this.user.usuario.length < 2) {
       this.validUser = true
       this.valido = false;
     }
 
-    //Validcao do cpf
 
+    //Validcao do cpf
     // Elimina CPFs invalidos conhecidos	
     let cpf = this.user.cpf.replace(/[^\d]+/g, '');
     if (cpf.length != 11 ||
@@ -102,10 +118,14 @@ export class CadastroComponent implements OnInit {
     if (this.valido == true) {
       this.usersService.postUser(this.user).subscribe((resp: Users) => {
         this.user = resp
-        this.router.navigate(['/home'])
-      })
-    }
+        alert("Usuario Cadastrado! Agora faça o login!")
+        location.assign('/login')
 
+      }, (erro) => {
+        alert("Algum dado invalido!")
+      })
+
+    }
   }
 
 }

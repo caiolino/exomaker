@@ -1,4 +1,4 @@
-<div class="titulo mt-5 pt-5">
+<div class="titulo">
     <h1 class="d-flex justify-content-center pt-5">Lista de usuários</h1>
     <hr>
 </div>
@@ -11,7 +11,7 @@
 
 <div class="mb-5 d-flex justify-content-center flex-wrap container">
 
-    <div class="user-box" *ngFor="let users of listaUsers">
+    <div class="user-box" *ngFor="let users of listaUsers | paginate: { itemsPerPage: 10, currentPage: p}">
         <div class="d-flex align-items-center">
             <p class="id d-flex justify-content-conter align-items-center">{{users.user_id}}</p>
             <h5 class="ml-3">{{users.usuario}}</h5>
@@ -24,5 +24,8 @@
             <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-user', users.user_id]">Excluir</button>
         </div>
     </div>
-
+</div>
+<div class="d-flex justify-content-center mb-3">
+    <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Próxima">
+    </pagination-controls>
 </div>

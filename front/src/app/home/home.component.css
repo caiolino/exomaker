@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
 
+.espaco{
+    margin-top: 125px;
+}
+
 .carrossel{
     background: transparent linear-gradient(270deg, #3E4896 0%, #697AFF 100%) 0% 0% no-repeat padding-box;
     height: 430px;
@@ -81,10 +85,17 @@
         margin-top: 0;
     }
 
-  }
+}
+
+@media screen and (max-width: 992px){
+    .espaco{
+        margin-top: 0;
+    }
+
+}
 
 
-  @media screen and (max-width: 775px){
+@media screen and (max-width: 775px){
     .card-icone{
         margin-top: 5px;
     }

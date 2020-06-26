@@ -34,6 +34,7 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests()
 		.antMatchers(HttpMethod.GET, "/produtos").permitAll()
 		.antMatchers(HttpMethod.GET, "/produtos/**").permitAll()
+		.antMatchers(HttpMethod.POST, "/contato/**").permitAll()
 		.antMatchers(HttpMethod.POST, "/produtos/cadastrar").hasRole("ADMIN")
 		.antMatchers(HttpMethod.PUT, "/produtos").hasRole("ADMIN")
 		.antMatchers(HttpMethod.DELETE, "/produtos/*").hasRole("ADMIN")

@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.exomaker.exomakerback.dto.UserLogin;
+import com.exomaker.exomakerback.model.Produto;
 import com.exomaker.exomakerback.model.Usuario;
 import com.exomaker.exomakerback.repository.UsuarioRepository;
 import com.exomaker.exomakerback.service.UsuarioService;
@@ -54,6 +55,11 @@ public class UsuarioController {
 	public ResponseEntity<Usuario> Post(@RequestBody Usuario usuario) {
 		return ResponseEntity.status(HttpStatus.CREATED)
 				.body(usuarioService.CadastrarUsuario(usuario));
+	}
+	
+	@GetMapping("/nome/{nome}")
+	public ResponseEntity<List<Usuario>> Getbyproduto(@PathVariable String nome){
+		return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome));
 	}
 
 	@PutMapping
