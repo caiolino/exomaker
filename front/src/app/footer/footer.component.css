@@ -21,9 +21,7 @@ footer > div >div{
 
 
 footer > div >div >ul >li > a:hover{
-background-color: #637bf0;
-color: #ffffff;
-padding: 10px;
+text-decoration: underline;
 }
 
 
@@ -46,16 +44,22 @@ ul{
     height: auto;
 } 
 
-.footer .footer-boottom{
+.footer{
     background-color: #363b96 ;
     color: #ffffff;
-    height: 50px;
+    height: 40px;
     width: 100%;
     text-align: center;
     bottom: 0px;
     left: 0px;
     padding-top: 20px;
     
+}
+.footer-boottom{
+    background-color: white;
+    color: #363b96;
+    height: 30px;
+    padding: 15px;
 }
 .faInstagram{
     color: #ffffff;
