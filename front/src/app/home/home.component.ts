@@ -22,13 +22,13 @@ export class HomeComponent implements OnInit {
 
   findAllProdutosDestaque() {
     this.produtosService.getAllProdutos().subscribe((resp: Produto[]) => {
-      this.listaProdutos = resp.slice(1, 5);
+      this.listaProdutos = resp.slice(8, 13);
     })
   }
 
   findAllProdutosPrincipal() {
     this.produtosService.getAllProdutos().subscribe((resp: Produto[]) => {
-      this.listaProdutosPrincipal = resp.slice(1, 4);
+      this.listaProdutosPrincipal = resp.slice(3, 6);
     })
   }
 

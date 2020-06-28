@@ -36,6 +36,13 @@ p{
         width: 100%;
 }
 
+@media screen and (max-width: 992px){
+    main{
+        margin-top: 0;
+    }
+
+}
+
 }
 @media screen and (max-width: 600px){
     main > article{

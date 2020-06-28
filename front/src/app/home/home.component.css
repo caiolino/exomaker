@@ -6,7 +6,7 @@
 
 .carrossel{
     background: transparent linear-gradient(270deg, #3E4896 0%, #697AFF 100%) 0% 0% no-repeat padding-box;
-    height: 480px;
+    max-height: 480px;
 }
 
 .fundo-card1{
@@ -16,7 +16,7 @@
     opacity: 1;
     width: 300px;
     margin: 20px;
-    margin-top: -150px;
+    height: 500px;
 }
 
 .letra-produto{
@@ -45,6 +45,7 @@
     opacity: 1;
     width: 15rem;
     margin: 10px;
+    height: 450px;
 }
 
 .fundo-suporte{

@@ -19,3 +19,9 @@ h1{
     font-weight: 500;
     color:#353E80;
 }
+@media screen and (max-width: 992px){
+    .titulo{
+        margin-top: 0;
+    }
+
+}

@@ -140,6 +140,13 @@ h3{
     color: #353E80;
 }
 
+.btpFiltro{
+    border: 0;
+    padding: 5px;
+    background-color: white;
+    color: #000;
+}
+
 @media screen and (max-width: 991px){
 .borda{
     max-width: 100%;

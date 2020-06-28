@@ -16,42 +16,45 @@
                 <div class="panel-body filtro">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#collapse0">
-                                <i class="indicator fa fa-caret-down" aria-hidden="true"></i> Price
-                            </a>
+                            <i class="indicator fa fa-caret-down" aria-hidden="true"></i> Preço
                         </h4>
                     </div>
                     <ul class="list-group">
                         <li class="list-group-item">
                             <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" value="0to10" (click)="findPreco_1()">
-                                    0 - 10$
-                                </label>
+                                <button class="btpFiltro" (click)="findPreco('0-10')">0 - R$10</button>
                             </div>
                         </li>
                         <li class="list-group-item">
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="" (click)="findPreco_2()">
-                                    10$ - 20$
+                                    <button class="btpFiltro" (click)="findPreco('10-20')">R$10 - R$20</button>
                                 </label>
                             </div>
                         </li>
                         <li class="list-group-item">
                             <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" value="">
-                                    20$ - 60$
-                                </label>
+                                <button class="btpFiltro" (click)="findPreco('20-30')">R$20 - R$30</button>
                             </div>
                         </li>
                         <li class="list-group-item">
                             <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" value="">
-                                    Maior que 60$
-                                </label>
+                                <button class="btpFiltro" (click)="findPreco('30-40')">R$30 - R$40</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="checkbox">
+                                <button class="btpFiltro" (click)="findPreco('50-60')">R$50 - R$60</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="checkbox">
+                                <button class="btpFiltro" (click)="findPreco('60+')">R$60 +</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="checkbox">
+                                <button class="btpFiltro" (click)=" findAllProdutos()">Remover filtro</button>
                             </div>
                         </li>
                     </ul>
@@ -107,7 +110,7 @@
             </div>
 
             <div class="container d-flex justify-content-center mb-3">
-                <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Próxima">
+                <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Próxima" autoHide="true">
                 </pagination-controls>
             </div>
 

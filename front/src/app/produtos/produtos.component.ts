@@ -45,26 +45,8 @@ export class ProdutosComponent implements OnInit {
     })
   }
 
-  findPreco_1() {
-    this.produtosService.findByPreco("0to10").subscribe((resp: Produto[]) => {
-      this.listaProdutos = resp
-    })
-  }
-
-  findPreco_2() {
-    this.produtosService.findByPreco("10to20").subscribe((resp: Produto[]) => {
-      this.listaProdutos = resp
-    })
-  }
-
-  findPreco_3() {
-    this.produtosService.findByPreco("20to60").subscribe((resp: Produto[]) => {
-      this.listaProdutos = resp
-    })
-  }
-
-  findPreco_4() {
-    this.produtosService.findByPreco("60+").subscribe((resp: Produto[]) => {
+  findPreco(cd:string) {
+    this.produtosService.findByPreco(cd).subscribe((resp: Produto[]) => {
       this.listaProdutos = resp
     })
   }
